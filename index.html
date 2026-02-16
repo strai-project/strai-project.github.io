@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My GitHub Pages Site</title>
+    <meta name="description" content="My site hosted on GitHub Pages" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="nav">
+        <div class="brand">MySite</div>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Hello 👋 I’m <span class="accent">Your Name</span>.</h1>
+        <p class="subtitle">
+          This is a simple static website hosted on GitHub Pages.
+        </p>
+        <div class="cta">
+          <a class="button" href="#projects">See projects</a>
+          <a class="button secondary" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p>
+          Write a short intro here. You can edit <code>index.html</code>,
+          style it in <code>styles.css</code>, and add interactivity in
+          <code>script.js</code>.
+        </p>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+        <ul class="projects">
+          <li>
+            <h3>Project One</h3>
+            <p>Short description of your project.</p>
+            <a href="#" aria-label="Project One link">Link →</a>
+          </li>
+          <li>
+            <h3>Project Two</h3>
+            <p>Short description of your project.</p>
+            <a href="#" aria-label="Project Two link">Link →</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <form id="contactForm" class="form">
+          <label>
+            Email
+            <input name="email" type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Say hi..." required></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+          <p id="formStatus" class="status" aria-live="polite"></p>
+        </form>
+        <p class="hint">
+          (This demo form doesn’t send emails — it just shows a message. If you
+          want a real contact form later, I can add a free backend option.)
+        </p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <small>© <span id="year"></span> Your Name • Built with GitHub Pages</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
