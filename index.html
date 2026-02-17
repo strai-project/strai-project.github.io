@@ -40,12 +40,12 @@
     nav a{color:var(--text); text-decoration:none; opacity:.9}
     nav a:hover{opacity:1}
     .navlinks{margin-left:auto; display:flex; gap:14px; flex-wrap:wrap}
-    .logo{height:32px; width:auto; display:block}
+    .logo{height:60px; width:auto; display:block}
     .brand{display:flex; align-items:center; gap:10px; font-weight:600}
     .hero{padding:48px 0 24px; border-bottom:1px solid var(--border)}
     .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.1; margin:0 0 14px}
     .hero .lead p{font-size:clamp(16px,2.2vw,18px); color:var(--muted); margin:0 0 14px; opacity:.95}
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; justify-content:center}
     .btn{
       display:inline-flex; align-items:center; gap:8px;
       padding:12px 16px; border-radius:10px; border:1px solid var(--border);
@@ -67,6 +67,7 @@
     .small{color:var(--muted); font-size:14px; opacity:.9}
     .team{display:grid; gap:16px}
     @media(min-width:900px){ .team{grid-template-columns:1fr 1fr} }
+    .team-member-image{display:block; height:200px; width:200px; margin:0 auto 18px; border-radius:50%; object-fit:cover}
     .image-block{
       border:2px dashed rgba(255,255,255,.25);
       border-radius:12px;
@@ -76,6 +77,7 @@
       font-size:14px; text-align:center; padding:20px;
     }
     a.btn:focus, button:focus, a:focus { outline:2px solid var(--brand-2); outline-offset:2px }
+    footer{padding:36px 0}
   </style>
 </head>
 <body>
@@ -89,15 +91,10 @@
           <span>GenAI Strategic Integration</span>
         </div>
         <div class="navlinks">
-          #purposePurpose</a>
-          #inputYour input</a>
-          #benefitYour benefit</a>
-          #targetTarget orgs</a>
-          #definitionsDefinitions</a>
-          #participationParticipation</a>
-          #confidentialityConfidentiality</a>
-          #teamTeam</a>
-          #contactContact</a>
+          <a href="#purpose">Purpose</a>
+          <a href="#input">Input and Benefits</a>
+          <a href="#participation">Participation</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -143,27 +140,24 @@
 
     <section id="input">
       <div class="wrap">
-        <div class="card">
-          <h2>Your input</h2>
-          <ul>
-            <li>Sharing your firsthand experience of adopting and integrating GenAI in your organization</li>
-            <li>Discussing what drives sustainable and responsible GenAI integration in your context</li>
-            <li>Reflecting openly on both successes and challenges encountered along the journey</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="benefit">
-      <div class="wrap">
-        <div class="card">
-          <h2>Your benefit</h2>
-          <ul>
-            <li>On-site results workshop to reflect on integration activities and recommendations</li>
-            <li>Receive a brief summary report of insights from across participating organizations</li>
-            <li>Gain early access to emerging best practices in GenAI integration</li>
-            <li>Contribution to shaping responsible and effective GenAI use in business</li>
-          </ul>
+        <div class="grid grid-2">
+          <div class="card">
+            <h2>Participant's input</h2>
+            <ul>
+              <li>Sharing your firsthand experience of adopting and integrating GenAI in your organization</li>
+              <li>Discussing what drives sustainable and responsible GenAI integration in your context</li>
+              <li>Reflecting openly on both successes and challenges encountered along the journey</li>
+            </ul>
+          </div>
+          <div class="card" id="benefit">
+            <h2>Participant's benefits</h2>
+            <ul>
+              <li>On-site results workshop to reflect on integration activities and recommendations</li>
+              <li>Receive a brief summary report of insights from across participating organizations</li>
+              <li>Gain early access to emerging best practices in GenAI integration</li>
+              <li>Contribution to shaping responsible and effective GenAI use in business</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -201,17 +195,24 @@
         <h2>Team</h2>
         <div class="team">
           <div class="card">
+            <img src="assets/Juliane.png" alt="Juliane Möllmann" class="team-member-image" />
             <h3>Juliane Möllmann</h3>
             <p class="small">Postdoctoral Researcher, Aalto University &amp; Aarhus University</p>
             <p>Juliane explores how organizations adapt innovation and knowledge‑exchange practices in response to emerging technologies, including GenAI. Her research focuses on self‑strategizing and innovation in complex, technology‑driven environments, drawing on deep expertise in corporate–startup collaboration and qualitative methods. She brings nearly a decade of industry experience as an innovation manager, solution engineer, and technical consultant.</p>
-            <p>https://www.linkedin.com/in/julianemoellmann/LinkedIn Profile</a></p>
+            <div class="cta" style="justify-content: center;">
+              <a href="https://www.linkedin.com/in/julianemoellmann/" class="btn">LinkedIn</a>
+              <a href="https://pure.au.dk/portal/en/persons/juliane.moellmann%40btech.au.dk/" class="btn">PURE Profile</a>
+            </div>
           </div>
           <div class="card">
+            <img src="assets/Madalina.png" alt="Madalina Pop" class="team-member-image" />
             <h3>Madalina Pop</h3>
             <p class="small">Assistant Professor, Aarhus University</p>
             <p>Madalina studies how emerging technologies—especially GenAI and open‑source software—transform organizational strategizing and collaboration. Using longitudinal ethnographic approaches, she examines how humans and intelligent systems coordinate complex innovation processes. She co‑leads the Free and Open Source Software research group and contributes to interdisciplinary initiatives across AI, strategy, and digital transformation.</p>
-            <!-- TODO: Add correct LinkedIn URL when available -->
-            <p>#LinkedIn Profile</a></p>
+            <div class="cta" style="justify-content: center;">
+              <a href="https://www.linkedin.com/in/madalinastoicovici/" class="btn">LinkedIn</a>
+              <a href="https://pure.au.dk/portal/en/persons/554705-554705/" class="btn">PURE Profile</a>
+            </div>
           </div>
         </div>
       </div>
@@ -219,28 +220,20 @@
 
     <section id="contact">
       <div class="wrap">
-        <h2>Contact</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Get in touch</h3>
-            <ul>
-              <li><strong>Booking:</strong> https://outlook.office.com/book/StrategicIntegrationofLLM@AarhusUniversitet.onmicrosoft.com/?ismsaljsauthenabledSchedule a call</a></li>
-              <li><strong>Email:</strong> mailto:juliane.moellmann@btech.au.dkjuliane.moellmann@btech.au.dk</a> (research team)</li>
-              <li><strong>Language:</strong> English</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Style</h3>
-            <p>Practitioner‑oriented, concise, and focused on actionable insights for leadership and team enablement.</p>
-          </div>
+        <p>If you are interested in participating or have any questions about the project, please feel free to reach out to us. We would be happy to discuss the project in more detail and explore how your organization can benefit from participating.</p
+          >
+        <div class="cta" style="justify-content: center;">
+          <a href="https://outlook.office.com/book/StrategicIntegrationofLLM@AarhusUniversitet.onmicrosoft.com/?ismsaljsauthenabled" class="btn primary">Book a call</a>
+          <a href="mailto:juliane.moellmann@btech.au.dk" class="btn">Email research team</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <p class="small">© <span id="year"></span> Strategic Integration of GenAI in Software Development • Aalto University &amp; Aarhus University</p>
+    <div class="wrap" style="display:flex; align-items:center; gap:20px">
+      <img src="assets/LogoBTECH.png" alt="BTECH Logo" style="height:50px; flex-shrink:0" />
+      <p class="small">© <span id="year"></span> Strategic Integration of GenAI in Software Development •  Aarhus University</p>
     </div>
   </footer>
 
