@@ -1,88 +1,251 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My GitHub Pages Site</title>
-    <meta name="description" content="My site hosted on GitHub Pages" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="container">
-      <nav class="nav">
-        <div class="brand">MySite</div>
-        <div class="links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+<head>
+  <meta charset="utf-8" />
+  <title>Strategic Integration of GenAI in Software Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Executive brief & participation info for European organizations (100+ employees) on the strategic integration of GenAI in software development." />
+  <meta property="og:title" content="Strategic Integration of GenAI in Software Development" />
+  <meta property="og:description" content="Executive brief & participation info for European organizations (100+ employees) on the strategic integration of GenAI in software development." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#002546;        /* page background */
+      --card:#003d73;      /* card background */
+      --muted:#ffffff;     /* secondary text */
+      --text:#ffffff;      /* main text */
+      --brand:#37a0cb;     /* primary accent */
+      --brand-2:#00aba4;   /* secondary accent */
+      --border:#003d73;    /* borders/lines */
+      --max: 1024px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      /* Flat background? Use: background: var(--bg); */
+      background:linear-gradient(180deg, #00182c, var(--bg) 40%, #00182c);
+    }
+    a{color:var(--brand)}
+    header{
+      position:sticky; top:0;
+      backdrop-filter:saturate(1.2) blur(10px);
+      background:rgba(0, 21, 41, 0.75);
+      border-bottom:1px solid var(--border);
+      z-index:10
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    nav{display:flex; align-items:center; gap:16px; padding:10px 0}
+    nav a{color:var(--text); text-decoration:none; opacity:.9}
+    nav a:hover{opacity:1}
+    .navlinks{margin-left:auto; display:flex; gap:14px; flex-wrap:wrap}
+    .logo{height:32px; width:auto; display:block}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:600}
+    .hero{padding:48px 0 24px; border-bottom:1px solid var(--border)}
+    .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.1; margin:0 0 14px}
+    .hero .lead p{font-size:clamp(16px,2.2vw,18px); color:var(--muted); margin:0 0 14px; opacity:.95}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 16px; border-radius:10px; border:1px solid var(--border);
+      color:var(--text); text-decoration:none; background:#00315c;
+      transition:.2s
+    }
+    .btn.primary{
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#002546; font-weight:700; border:none
+    }
+    .btn:hover{transform:translateY(-1px)}
+    section{padding:36px 0; border-bottom:1px solid var(--border)}
+    h2{font-size:clamp(22px,3vw,28px); margin:0 0 14px}
+    h3{font-size:18px; margin:18px 0 8px}
+    .grid{display:grid; gap:18px}
+    @media(min-width:800px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
+    .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px}
+    ul{margin:10px 0 0 18px}
+    .small{color:var(--muted); font-size:14px; opacity:.9}
+    .team{display:grid; gap:16px}
+    @media(min-width:900px){ .team{grid-template-columns:1fr 1fr} }
+    .image-block{
+      border:2px dashed rgba(255,255,255,.25);
+      border-radius:12px;
+      min-height:280px;
+      display:grid; place-items:center;
+      color:#d1f1ff; background:rgba(0,0,0,.12);
+      font-size:14px; text-align:center; padding:20px;
+    }
+    a.btn:focus, button:focus, a:focus { outline:2px solid var(--brand-2); outline-offset:2px }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary">
+        <div class="brand">
+          <!-- If you move the logo into /assets, update src to assets/strai-logo.png -->
+          <img src="assets/strai-logo.png" alt="STRAI Logo" class="logo" />
+          <span>GenAI Strategic Integration</span>
+        </div>
+        <div class="navlinks">
+          #purposePurpose</a>
+          #inputYour input</a>
+          #benefitYour benefit</a>
+          #targetTarget orgs</a>
+          #definitionsDefinitions</a>
+          #participationParticipation</a>
+          #confidentialityConfidentiality</a>
+          #teamTeam</a>
+          #contactContact</a>
         </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main class="container">
-      <section class="hero">
-        <h1>Hello 👋 I’m <span class="accent">Your Name</span>.</h1>
-        <p class="subtitle">
-          This is a simple static website hosted on GitHub Pages.
-        </p>
-        <div class="cta">
-          <a class="button" href="#projects">See projects</a>
-          <a class="button secondary" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+  <main>
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1>Strategic Integration of GenAI in Software Development</h1>
+        <div class="lead">
+          <p>Our research project at Aarhus University’s Department of Business Development and Technology examines how organizations strategically integrate generative AI (GenAI) into their business operations. We examine how companies transition from early experimentation with GenAI tools to broader, strategic implementation across departments and processes.</p>
+          <p>Through in-depth case studies, we explore what drives organizations to adopt GenAI, how integration unfolds in practice, and what challenges and opportunities arise along the way. We are particularly interested in how different configurations of technologies, strategies, and organizational practices shape the outcomes of GenAI adoption.</p>
+          <p>To capture these experiences, we conduct interviews and workshops with key stakeholders, including managers, employees, and technical teams involved in GenAI initiatives. The insights gathered will help participating companies and the wider business community identify effective strategies and pitfalls to avoid when using GenAI to drive innovation and growth.</p>
         </div>
-      </section>
+        <div class="cta">
+          <a href="https://outlook.office.com/book/StrategicIntegrationofLLM@AarhusUniversitet.onmicrosoft.com/?ismsaljsauthenabled" class="btn primary">Book a call</a>
+          <a href="mailto:juliane.moellmann@btech.au.dk" class="btn">Email research team</a>
+        </div>
+      </div>
+    </section>
 
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p>
-          Write a short intro here. You can edit <code>index.html</code>,
-          style it in <code>styles.css</code>, and add interactivity in
-          <code>script.js</code>.
-        </p>
-      </section>
+    <!-- Project visual -->
+    <section id="visual">
+      <div class="wrap">
+        <img src="assets/project-image.jpg" alt="Strategic Integration of GenAI in Software Development" style="width:100%;border-radius:12px" />
+      </div>
+    </section>
 
-      <section id="projects" class="card">
-        <h2>Projects</h2>
-        <ul class="projects">
-          <li>
-            <h3>Project One</h3>
-            <p>Short description of your project.</p>
-            <a href="#" aria-label="Project One link">Link →</a>
-          </li>
-          <li>
-            <h3>Project Two</h3>
-            <p>Short description of your project.</p>
-            <a href="#" aria-label="Project Two link">Link →</a>
-          </li>
-        </ul>
-      </section>
+    <!-- Cards / content you specified -->
+    <section id="purpose">
+      <div class="wrap">
+        <div class="card">
+          <h2>Research purpose</h2>
+          <ul>
+            <li>Understand how companies move from experimentation to strategic use of GenAI</li>
+            <li>Identify organizational, strategic, technical, and cultural factors that influence success</li>
+            <li>Determine drivers and challenges of strategic GenAI integration</li>
+            <li>Develop practical insights and best practices useful for industry and research alike</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact" class="card">
+    <section id="input">
+      <div class="wrap">
+        <div class="card">
+          <h2>Your input</h2>
+          <ul>
+            <li>Sharing your firsthand experience of adopting and integrating GenAI in your organization</li>
+            <li>Discussing what drives sustainable and responsible GenAI integration in your context</li>
+            <li>Reflecting openly on both successes and challenges encountered along the journey</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefit">
+      <div class="wrap">
+        <div class="card">
+          <h2>Your benefit</h2>
+          <ul>
+            <li>On-site results workshop to reflect on integration activities and recommendations</li>
+            <li>Receive a brief summary report of insights from across participating organizations</li>
+            <li>Gain early access to emerging best practices in GenAI integration</li>
+            <li>Contribution to shaping responsible and effective GenAI use in business</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="participation">
+      <div class="wrap">
+        <div class="card">
+          <h2>What does participation involve?</h2>
+          <ul>
+            <li>Interviews (45–60 minutes) with stakeholders</li>
+            <li>Remote/Onsite participation</li>
+            <li>Stakeholders: CTO/Head of IT, Team Leads (Software/IT), AI/ML units, AI developers/engineers</li>
+            <li>Short follow-up conversation for validation of analysis results</li>
+            <li>If possible, share internal documents about your GenAI strategy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="confidentiality">
+      <div class="wrap">
+        <div class="card">
+          <h2>Confidentiality and ethics</h2>
+          <ul>
+            <li>All interviews and discussions will be fully anonymized, and we will not disclose your name or any identifying details</li>
+            <li>Your involvement in this study is entirely voluntary, and you can withdraw your participation later</li>
+            <li>Our research complies with the ethical guidelines of Aarhus University</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="wrap">
+        <h2>Team</h2>
+        <div class="team">
+          <div class="card">
+            <h3>Juliane Möllmann</h3>
+            <p class="small">Postdoctoral Researcher, Aalto University &amp; Aarhus University</p>
+            <p>Juliane explores how organizations adapt innovation and knowledge‑exchange practices in response to emerging technologies, including GenAI. Her research focuses on self‑strategizing and innovation in complex, technology‑driven environments, drawing on deep expertise in corporate–startup collaboration and qualitative methods. She brings nearly a decade of industry experience as an innovation manager, solution engineer, and technical consultant.</p>
+            <p>https://www.linkedin.com/in/julianemoellmann/LinkedIn Profile</a></p>
+          </div>
+          <div class="card">
+            <h3>Madalina Pop</h3>
+            <p class="small">Assistant Professor, Aarhus University</p>
+            <p>Madalina studies how emerging technologies—especially GenAI and open‑source software—transform organizational strategizing and collaboration. Using longitudinal ethnographic approaches, she examines how humans and intelligent systems coordinate complex innovation processes. She co‑leads the Free and Open Source Software research group and contributes to interdisciplinary initiatives across AI, strategy, and digital transformation.</p>
+            <!-- TODO: Add correct LinkedIn URL when available -->
+            <p>#LinkedIn Profile</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
         <h2>Contact</h2>
-        <form id="contactForm" class="form">
-          <label>
-            Email
-            <input name="email" type="email" placeholder="you@example.com" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="4" placeholder="Say hi..." required></textarea>
-          </label>
-          <button class="button" type="submit">Send</button>
-          <p id="formStatus" class="status" aria-live="polite"></p>
-        </form>
-        <p class="hint">
-          (This demo form doesn’t send emails — it just shows a message. If you
-          want a real contact form later, I can add a free backend option.)
-        </p>
-      </section>
-    </main>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Get in touch</h3>
+            <ul>
+              <li><strong>Booking:</strong> https://outlook.office.com/book/StrategicIntegrationofLLM@AarhusUniversitet.onmicrosoft.com/?ismsaljsauthenabledSchedule a call</a></li>
+              <li><strong>Email:</strong> mailto:juliane.moellmann@btech.au.dkjuliane.moellmann@btech.au.dk</a> (research team)</li>
+              <li><strong>Language:</strong> English</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Style</h3>
+            <p>Practitioner‑oriented, concise, and focused on actionable insights for leadership and team enablement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer class="container footer">
-      <small>© <span id="year"></span> Your Name • Built with GitHub Pages</small>
-    </footer>
+  <footer>
+    <div class="wrap">
+      <p class="small">© <span id="year"></span> Strategic Integration of GenAI in Software Development • Aalto University &amp; Aarhus University</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
