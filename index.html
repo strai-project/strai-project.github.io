@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,76 +9,397 @@
   <meta property="og:title" content="Strategic Integration of GenAI in Software Development" />
   <meta property="og:description" content="Executive brief & participation info for European organizations (100+ employees) on the strategic integration of GenAI in software development." />
   <meta property="og:type" content="website" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/strai-logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
-    :root{
-      --bg:#002546;        /* page background */
-      --card:#003d73;      /* card background */
-      --muted:#ffffff;     /* secondary text */
-      --text:#ffffff;      /* main text */
-      --brand:#37a0cb;     /* primary accent */
-      --brand-2:#00aba4;   /* secondary accent */
-      --border:#003d73;    /* borders/lines */
-      --max: 1024px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
-      color:var(--text);
-      /* Flat background? Use: background: var(--bg); */
-      background:linear-gradient(180deg, #00182c, var(--bg) 40%, #00182c);
-    }
-    a{color:var(--brand)}
-    header{
-      position:sticky; top:0;
-      backdrop-filter:saturate(1.2) blur(10px);
-      background:rgba(0, 21, 41, 0.75);
-      border-bottom:1px solid var(--border);
-      z-index:10
-    }
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
-    nav{display:flex; align-items:center; gap:16px; padding:10px 0}
-    nav a{color:var(--text); text-decoration:none; opacity:.9}
-    nav a:hover{opacity:1}
-    .navlinks{margin-left:auto; display:flex; gap:14px; flex-wrap:wrap}
-    .logo{height:60px; width:auto; display:block}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:600}
-    .hero{padding:48px 0 24px; border-bottom:1px solid var(--border)}
-    .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.1; margin:0 0 14px}
-    .hero .lead p{font-size:clamp(16px,2.2vw,18px); color:var(--muted); margin:0 0 14px; opacity:.95}
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; justify-content:center}
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:12px 16px; border-radius:10px; border:1px solid var(--border);
-      color:var(--text); text-decoration:none; background:#00315c;
-      transition:.2s
-    }
-    .btn.primary{
-      background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#002546; font-weight:700; border:none
-    }
-    .btn:hover{transform:translateY(-1px)}
-    section{padding:36px 0; border-bottom:1px solid var(--border)}
-    h2{font-size:clamp(22px,3vw,28px); margin:0 0 14px}
-    h3{font-size:18px; margin:18px 0 8px}
-    .grid{display:grid; gap:18px}
-    @media(min-width:800px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
-    .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px}
-    ul{margin:10px 0 0 18px}
-    .small{color:var(--muted); font-size:14px; opacity:.9}
-    .team{display:grid; gap:16px}
-    @media(min-width:900px){ .team{grid-template-columns:1fr 1fr} }
-    .team-member-image{display:block; height:200px; width:200px; margin:0 auto 18px; border-radius:50%; object-fit:cover}
-    .image-block{
-      border:2px dashed rgba(255,255,255,.25);
-      border-radius:12px;
-      min-height:280px;
-      display:grid; place-items:center;
-      color:#d1f1ff; background:rgba(0,0,0,.12);
-      font-size:14px; text-align:center; padding:20px;
-    }
-    a.btn:focus, button:focus, a:focus { outline:2px solid var(--brand-2); outline-offset:2px }
-    footer{padding:36px 0}
+:root {
+  /* Colors */
+  --bg: #001e36;
+  --surface: #002e52;
+  --surface-hover: #003e6d;
+  --primary: #37a0cb;
+  --primary-glow: rgba(55, 160, 203, 0.25);
+  --secondary: #00aba4;
+  --secondary-glow: rgba(0, 171, 164, 0.2);
+  --text: #ffffff;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --max-width: 1200px;
+  --radius: 16px;
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(55, 160, 203, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 171, 164, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(55, 160, 203, 0.05) 0px, transparent 50%);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header & Nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 30, 54, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+}
+
+.navlinks {
+  display: flex;
+  gap: 24px;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navlinks a:hover {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lead {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.lead p {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+  filter: brightness(1.1);
+}
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  color: var(--primary);
+}
+
+/* Visual Section */
+.visual {
+  padding: 20px 0 60px;
+}
+
+.visual img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--primary);
+  background: var(--surface-hover);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.card h2::after {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Team Section */
+.team-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 24px;
+  border: 4px solid var(--surface);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.team-member:hover .team-member-image {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.team-member .role {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.team-member .bio {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Contact Footer */
+.contact-section {
+  text-align: center;
+  background: linear-gradient(to bottom, var(--bg), var(--surface));
+  border-top: 1px solid var(--border);
+}
+
+.contact-section p {
+  max-width: 700px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    gap: 16px;
+  }
+  
+  .navlinks {
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+}
   </style>
 </head>
 <body>
@@ -85,15 +407,15 @@
   <header>
     <div class="wrap">
       <nav aria-label="Primary">
-        <div class="brand">
-          <!-- If you move the logo into /assets, update src to assets/strai-logo.png -->
+        <a href="#top" class="brand">
           <img src="assets/strai-logo.png" alt="STRAI Logo" class="logo" />
           <span>GenAI Strategic Integration</span>
-        </div>
+        </a>
         <div class="navlinks">
           <a href="#purpose">Purpose</a>
-          <a href="#input">Input and Benefits</a>
+          <a href="#input">Input</a>
           <a href="#participation">Participation</a>
+          <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -109,21 +431,20 @@
           <p>Through in-depth case studies, we explore what drives organizations to adopt GenAI, how integration unfolds in practice, and what challenges and opportunities arise along the way. We are particularly interested in how different configurations of technologies, strategies, and organizational practices shape the outcomes of GenAI adoption.</p>
           <p>To capture these experiences, we conduct interviews and workshops with key stakeholders, including managers, employees, and technical teams involved in GenAI initiatives. The insights gathered will help participating companies and the wider business community identify effective strategies and pitfalls to avoid when using GenAI to drive innovation and growth.</p>
         </div>
-        <div class="cta">
+        <div class="cta-group">
           <a href="https://outlook.office.com/book/StrategicIntegrationofLLM@AarhusUniversitet.onmicrosoft.com/?ismsaljsauthenabled" class="btn primary">Book a call</a>
-          <a href="mailto:juliane.moellmann@btech.au.dk" class="btn">Email research team</a>
+          <a href="mailto:juliane.moellmann@btech.au.dk" class="btn secondary">Email research team</a>
         </div>
       </div>
     </section>
 
     <!-- Project visual -->
-    <section id="visual">
+    <section id="visual" class="visual">
       <div class="wrap">
-        <img src="assets/project-image.jpg" alt="Strategic Integration of GenAI in Software Development" style="width:100%;border-radius:12px" />
+        <img src="assets/project-image.jpg" alt="Strategic Integration of GenAI in Software Development" />
       </div>
     </section>
 
-    <!-- Cards / content you specified -->
     <section id="purpose">
       <div class="wrap">
         <div class="card">
@@ -133,6 +454,21 @@
             <li>Identify organizational, strategic, technical, and cultural factors that influence success</li>
             <li>Determine drivers and challenges of strategic GenAI integration</li>
             <li>Develop practical insights and best practices useful for industry and research alike</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="participation">
+      <div class="wrap">
+        <div class="card">
+          <h2>What does participation involve?</h2>
+          <ul>
+              <li>Interviews (45–60 minutes) with stakeholders</li>
+              <li>Remote/Onsite participation</li>
+              <li>Stakeholders: CTO/Head of IT, Team Leads (Software/IT), AI/ML units, AI developers/engineers</li>
+              <li>Short follow-up conversation for validation of analysis results</li>
+              <li>If possible, share internal documents about your GenAI strategy</li>
           </ul>
         </div>
       </div>
@@ -164,81 +500,108 @@
 
     <section id="participation">
       <div class="wrap">
-        <div class="card">
-          <h2>What does participation involve?</h2>
-          <ul>
-            <li>Interviews (45–60 minutes) with stakeholders</li>
-            <li>Remote/Onsite participation</li>
-            <li>Stakeholders: CTO/Head of IT, Team Leads (Software/IT), AI/ML units, AI developers/engineers</li>
-            <li>Short follow-up conversation for validation of analysis results</li>
-            <li>If possible, share internal documents about your GenAI strategy</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="confidentiality">
-      <div class="wrap">
-        <div class="card">
-          <h2>Confidentiality and ethics</h2>
-          <ul>
-            <li>All interviews and discussions will be fully anonymized, and we will not disclose your name or any identifying details</li>
-            <li>Your involvement in this study is entirely voluntary, and you can withdraw your participation later</li>
-            <li>Our research complies with the ethical guidelines of Aarhus University</li>
-          </ul>
+          <div class="card">
+            <h2>Confidentiality and ethics</h2>
+            <ul>
+              <li>All interviews and discussions will be fully anonymized, and we will not disclose your name or any identifying details</li>
+              <li>Your involvement in this study is entirely voluntary, and you can withdraw your participation later</li>
+              <li>Our research complies with the ethical guidelines of Aarhus University</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="team">
       <div class="wrap">
-        <h2>Team</h2>
-        <div class="team">
-          <div class="card">
+        <h2 style="text-align: center; display: block; margin-bottom: 50px;">Research Team</h2>
+        <div class="team-grid">
+          <div class="card team-member">
             <img src="assets/Juliane.png" alt="Juliane Möllmann" class="team-member-image" />
             <h3>Juliane Möllmann</h3>
-            <p class="small">Postdoctoral Researcher, Aalto University &amp; Aarhus University</p>
-            <p>Juliane explores how organizations adapt innovation and knowledge‑exchange practices in response to emerging technologies, including GenAI. Her research focuses on self‑strategizing and innovation in complex, technology‑driven environments, drawing on deep expertise in corporate–startup collaboration and qualitative methods. She brings nearly a decade of industry experience as an innovation manager, solution engineer, and technical consultant.</p>
-            <div class="cta" style="justify-content: center;">
-              <a href="https://www.linkedin.com/in/julianemoellmann/" class="btn">LinkedIn</a>
-              <a href="https://pure.au.dk/portal/en/persons/juliane.moellmann%40btech.au.dk/" class="btn">PURE Profile</a>
+            <span class="role">Postdoctoral Researcher, Aalto University &amp; Aarhus University</span>
+            <p class="bio">Juliane explores how organizations adapt innovation and knowledge‑exchange practices in response to emerging technologies, including GenAI. Her research focuses on self‑strategizing and innovation in complex, technology‑driven environments, drawing on deep expertise in corporate–startup collaboration and qualitative methods. She brings nearly a decade of industry experience as an innovation manager, solution engineer, and technical consultant.</p>
+            <div class="cta-group">
+              <a href="https://www.linkedin.com/in/julianemoellmann/" class="btn secondary">LinkedIn</a>
+              <a href="https://pure.au.dk/portal/en/persons/juliane.moellmann%40btech.au.dk/" class="btn secondary">PURE Profile</a>
             </div>
           </div>
-          <div class="card">
+          <div class="card team-member">
             <img src="assets/Madalina.png" alt="Madalina Pop" class="team-member-image" />
             <h3>Madalina Pop</h3>
-            <p class="small">Assistant Professor, Aarhus University</p>
-            <p>Madalina studies how emerging technologies—especially GenAI and open‑source software—transform organizational strategizing and collaboration. Using longitudinal ethnographic approaches, she examines how humans and intelligent systems coordinate complex innovation processes. She co‑leads the Free and Open Source Software research group and contributes to interdisciplinary initiatives across AI, strategy, and digital transformation.</p>
-            <div class="cta" style="justify-content: center;">
-              <a href="https://www.linkedin.com/in/madalinastoicovici/" class="btn">LinkedIn</a>
-              <a href="https://pure.au.dk/portal/en/persons/554705-554705/" class="btn">PURE Profile</a>
+            <span class="role">Assistant Professor, Aarhus University</span>
+            <p class="bio">Madalina studies how emerging technologies—especially GenAI and open‑source software—transform organizational strategizing and collaboration. Using longitudinal ethnographic approaches, she examines how humans and intelligent systems coordinate complex innovation processes. She co‑leads the Free and Open Source Software research group and contributes to interdisciplinary initiatives across AI, strategy, and digital transformation.</p>
+            <div class="cta-group">
+              <a href="https://www.linkedin.com/in/madalinastoicovici/" class="btn secondary">LinkedIn</a>
+              <a href="https://pure.au.dk/portal/en/persons/554705-554705/" class="btn secondary">PURE Profile</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact-section">
       <div class="wrap">
-        <p>If you are interested in participating or have any questions about the project, please feel free to reach out to us. We would be happy to discuss the project in more detail and explore how your organization can benefit from participating.</p
-          >
-        <div class="cta" style="justify-content: center;">
+        <h2>Get in touch</h2>
+        <p>If you are interested in participating or have any questions about the project, please feel free to reach out to us. We would be happy to discuss the project in more detail and explore how your organization can benefit from participating.</p>
+        <div class="cta-group">
           <a href="https://outlook.office.com/book/StrategicIntegrationofLLM@AarhusUniversitet.onmicrosoft.com/?ismsaljsauthenabled" class="btn primary">Book a call</a>
-          <a href="mailto:juliane.moellmann@btech.au.dk" class="btn">Email research team</a>
+          <a href="mailto:juliane.moellmann@btech.au.dk" class="btn secondary">Email research team</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap" style="display:flex; align-items:center; gap:20px">
-      <img src="assets/LogoBTECH.png" alt="BTECH Logo" style="height:50px; flex-shrink:0" />
-      <p class="small">© <span id="year"></span> Strategic Integration of GenAI in Software Development •  Aarhus University</p>
+    <div class="wrap">
+      <div class="footer-content">
+        <img src="assets/LogoBTECH.png" alt="BTECH Logo" class="footer-logo" />
+        <p class="footer-text">© <span id="year"></span> Strategic Integration of GenAI in Software Development • Aarhus University</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  // Set current year in footer
+  const yearSpan = document.getElementById('year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Smooth scroll for nav links (already handled by CSS scroll-behavior: smooth, but this ensures it)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Reveal on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section, .card').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+});
   </script>
 </body>
 </html>
